@@ -11,13 +11,17 @@ int main()
     string name;
     cin >> name;
 
+    cout<<"Please enter the number of lines: ";
+    int line = 0;
+    cin>>line;
+
     const string greeting = "Hello, " + name + "!";
 
     const string::size_type colls = greeting.size() + 2; //int
     const string star((greeting.size() - name.size())/2, '.');
     int r = 0;
     string::size_type c = 0;
-    int rows = 11;
+    int rows = line;
     bool sup = true;
 
     cout << endl;
@@ -47,5 +51,6 @@ int main()
         r++;
     }
     Sleep(2000);
+    cout<<endl;
     return 0;
 }
